@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html> 
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+    <head> 
+        <title>My first X3DOM page</title> 			
+        <script type='text/javascript' src='http://www.x3dom.org/download/x3dom.js'> </script> 
+        <link rel='stylesheet' type='text/css' href='http://www.x3dom.org/download/x3dom.css'></link> 
+    </head> 
+    <body>
+        <script>
+            function rotateModel() {
+                if (document.getElementById('modelX3D__myCoke-TIMER').getAttribute('enabled') != 'true')
+                    document.getElementById('modelX3D__myCoke-TIMER').setAttribute('enabled', 'true');
+                else
+                    document.getElementById('modelX3D__myCoke-TIMER').setAttribute('enabled', 'false');
+            }
+            var spinning = true;
+            var lightOn = true;
+            function spin()
+            {
+            spinning = !spinning;
+            document.getElementById('model__RotationTimer').setAttribute('enabled', spinning.toString());
+            }
+            function wireframe()
+            {
+            var e = document.getElementById('model');
+            e.runtime.togglePoints(true);
+            e.runtime.togglePoints(true);
+            }
+            function lighting()
+            {
+            lightOn = !lightOn;
+            document.getElementById('model__lighting').setAttribute('headlight', lightOn.toString());
+            }
+            function cam1()
+            {
+            document.getElementById('model__Camera01').setAttribute('bind', 'true');
+            }
+            function cam2()
+            {
+            document.getElementById('model__Camera02').setAttribute('bind', 'true');
+            }
+            
+	
+    function changeColor(col)
+	{
+		document.getElementById('body_color').setAttribute("diffuseColor", col);
+	}
+
+    function changeTexture(tex)
+	{
+		document.getElementById('rim_tex').setAttribute("url", tex);
+	}
+  
+        </script>
+        <h1>Hello, X3DOM!</h1> 
+        <p> 
+            This is my first html page with some 3d objects. 
+        </p> 
+        <x3d width='600px' height='400px'> 
+            <scene> 
+                <inline url="x3d/can.x3d"> </inline> 
+            </scene> 
+        </x3d>
+        <x3d width='600px' height='400px'> 
+            <scene> 
+                <inline nameSpaceName="modelX3D" mapDEFToID="true" onclick='rotateModel();' url="x3d/bottle5.x3d"> </inline> 
+            </scene> 
+        </x3d>
+        <div id="interaction">
+            <button type="button" onclick="spin()">SPIN</button>
+            <button type="button" onclick="wireframe()">WIREFRAME</button>
+            <button type="button" onclick="lighting()">LIGHTING</button>
+            <button type="button" onclick="cam1()">FRONT</button>
+            <button type="button" onclick="cam2()">BACK2</button>
+            </div>
+        <x3d width='600px' height='400px'> 
+            <scene> 
+                <inline url="x3d/bottle4.x3d"> </inline> 
+            </scene> 
+        </x3d>
+        <x3d width='600px' height='400px'> 
+            <scene> 
+                <inline url="x3d/cup2.x3d"> </inline> 
+            </scene> 
+        </x3d>
+        <x3d width='600px' height='400px'> 
+            <scene> 
+                <inline url="x3d/bottle2.x3d"> </inline> 
+            </scene> 
+        </x3d>
+        <x3d width='600px' height='400px'> 
+            <scene> 
+                <inline url="x3d/bottle3.x3d"> </inline> 
+            </scene> 
+        </x3d>  
+    </body> 
+</html>   
