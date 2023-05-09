@@ -40,7 +40,15 @@
 				<Group DEF="group_ME_Cylinder">
 					<Shape>
 						<Appearance>
-						<ImageTexture url='"Maps/dr_pepper_texture.png"'/>
+							<Material DEF="MA_Material_001"
+										diffuseColor="0.100 0.400 0.900"
+										specularColor="0.401 0.401 0.401"
+										emissiveColor="0.000 0.000 0.000"
+										ambientIntensity="0.000"
+										shininess="1"
+										transparency="0.0"
+										/>
+						<ImageTexture id="text" url='"Maps/dr_pepper_texture.png"'/>
 						</Appearance>
 						<IndexedFaceSet solid="false"
 						                creaseAngle="4.0000"

@@ -1,106 +1,73 @@
-function cokeScene(){
-    nSwitch = 0;
-    document.getElementById('SceneSwitch').setAttribute('whichChoice', nSwitch);
-}
+function switchScene(id){
+    document.getElementById('home').style.display = 'none';
+	document.getElementById('coke').style.display = 'none';
+	document.getElementById('sprite').style.display = 'none';
+	document.getElementById('pepper').style.display = 'none';
 
-function spriteScene(){
-    nSwitch = 1;
-    document.getElementById('SceneSwitch').setAttribute('whichChoice', nSwitch);
-}
-
-function pepperScene(){
-    nSwitch = 2;
-    document.getElementById('SceneSwitch').setAttribute('whichChoice', nSwitch);
+	document.getElementById(id).style.display = 'block';
 }
 
 var spinning = false;
 
-function spin()
+function spin(id)
 {
 	spinning = !spinning;
-	document.getElementById('model__RotationTimer').setAttribute('enabled', spinning.toString());
+	document.getElementById(id).setAttribute('enabled', spinning.toString());
 }
 
-function stopRotation()
-{
-	spinning = false;
-	document.getElementById('model__RotationTimer').setAttribute('enabled', spinning.toString());
-}
 
-function animateModel()
+
+function animateModel(id)
 {
-    if(document.getElementById('model__RotationTimer').getAttribute('enabled')!= 'true')
-        document.getElementById('model__RotationTimer').setAttribute('enabled', 'true');
+    if(document.getElementById(id).getAttribute('enabled')!= 'true')
+        document.getElementById(id).setAttribute('enabled', 'true');
     else
-        document.getElementById('model__RotationTimer').setAttribute('enabled', 'false');
+        document.getElementById(id).setAttribute('enabled', 'false');
 }
 
-function wireFrame()
+function spin2(id){
+    document.getElementById(id).setRotation(180);
+}
+
+function wireframe(id)
 {
-	var e = document.getElementById('wire');
+	var e = document.getElementById(id);
 	e.runtime.togglePoints(true);
 	e.runtime.togglePoints(true);
 }
 
 var lightOn = true;
 
-function headLight()
+function light(id)
 {
 	lightOn = !lightOn;
-	document.getElementById('model__headlight').setAttribute('headlight', lightOn.toString());
+	document.getElementById(id).setAttribute('headlight', lightOn.toString());
 	console.log(lightOn);
 }
 
-function omniLight()
+
+function camera(id)
 {
-	lightOn = !lightOn;
-	document.getElementById('model__omniLight').setAttribute('headlight', lightOn.toString());
-	console.log(lightOn);
+	document.getElementById(id).setAttribute('bind', 'true');
 }
 
-function targetLight()
+function changeColor(col, id)
 {
-	lightOn = !lightOn;
-	document.getElementById('model__targetLight').setAttribute('headlight', lightOn.toString());
-	console.log(lightOn);
+    document.getElementById(id).setAttribute("diffuseColor", col);
 }
 
-function cameraFront()
+function changeOpacity(opacity, id)
 {
-	document.getElementById('model__CameraFront').setAttribute('bind', 'true');
+	//console.log(opacity.toString());
+    document.getElementById(id).setAttribute("transparency", opacity.toString());
 }
 
-function cameraBack()
+function changeTexture(tex, id)
 {
-	document.getElementById('model__CameraBack').setAttribute('bind', 'true');
+    document.getElementById(id).setAttribute("url", tex);
 }
 
-function cameraLeft()
-{
-	document.getElementById('model__CameraLeft').setAttribute('bind', 'true');
-}
-
-function cameraRight()
-{
-	document.getElementById('model__CameraRight').setAttribute('bind', 'true');
-}
-
-function cameraTop()
-{
-	document.getElementById('model__CameraTop').setAttribute('bind', 'true');
-}
-
-function cameraBottom()
-{
-	document.getElementById('model__CameraBottom').setAttribute('bind', 'true');
-}
-
-function changeColor(col)
-{
-    document.getElementById('body_color').setAttribute("diffuseColor", col);
-}
-
-function changeTexture(tex)
-{
-    document.getElementById('rim_tex').setAttribute("url", tex);
+function backColour(col, id)
+{    
+	document.getElementById(id).setAttribute('skyColor', col);
 }
