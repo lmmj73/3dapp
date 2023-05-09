@@ -6,7 +6,8 @@
 		<meta name="generator" content="Blender 3.4.1" />
 	</head>
 	<Scene>
-		<NavigationInfo headlight="false"
+		<NavigationInfo id="headlight"
+						headlight="false"
 		                visibilityLimit="0.0"
 		                type='"EXAMINE", "ANY"'
 		                avatarSize="0.25, 1.75, 0.75"
@@ -174,6 +175,54 @@
 			           orientation="0.00 1.00 0.00 0.00"
 			           fieldOfView="0.691"
 			           />
+		</Transform>
+				<Transform DEF="Sun_001_TRANSFORM"
+		           translation="0.000000 5.853282 -0.053072"
+		           scale="1.000000 1.000000 1.000000"
+		           rotation="0.000000 0.707107 0.707107 3.141593"
+		           >
+			<DirectionalLight DEF="LA_Sun_001"
+			                  ambientIntensity="0.0000"
+			                  color="1.0000 1.0000 1.0000"
+			                  intensity="0.5714"
+			                  direction="0.0000 0.0000 -1.0000"
+			                  />
+		</Transform>
+		<Transform DEF="Sun_002_TRANSFORM"
+		           translation="8.237325 2.142139 0.000000"
+		           scale="1.000000 1.000000 1.000000"
+		           rotation="0.506275 0.625715 0.593436 2.137771"
+		           >
+			<DirectionalLight DEF="LA_Sun_002"
+			                  ambientIntensity="0.0000"
+			                  color="1.0000 1.0000 1.0000"
+			                  intensity="0.5714"
+			                  direction="0.0000 -0.0000 -1.0000"
+			                  />
+		</Transform>
+		<Transform DEF="Sun_003_TRANSFORM"
+		           translation="0.000000 -3.829008 0.000000"
+		           scale="1.000000 1.000000 1.000000"
+		           rotation="0.999981 -0.004363 -0.004363 1.570815"
+		           >
+			<DirectionalLight DEF="LA_Sun_003"
+			                  ambientIntensity="0.0000"
+			                  color="1.0000 1.0000 1.0000"
+			                  intensity="0.5714"
+			                  direction="0.0000 0.0000 -1.0000"
+			                  />
+		</Transform>
+		<Transform DEF="Sun_TRANSFORM"
+		           translation="-6.374341 1.676292 0.000000"
+		           scale="1.000000 1.000000 1.000000"
+		           rotation="0.671016 -0.286949 -0.683665 2.632504"
+		           >
+			<DirectionalLight DEF="LA_Sun"
+			                  ambientIntensity="0.0000"
+			                  color="1.0000 1.0000 1.0000"
+			                  intensity="0.5714"
+			                  direction="0.0000 0.0000 -1.0000"
+			                  />
 		</Transform>
 	</Scene>
 </X3D>

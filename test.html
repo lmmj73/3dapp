@@ -16,6 +16,9 @@
     <link rel="stylesheet" href="css/custom.css">
     <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
+    <link href="gallery.css" rel="stylesheet" type="text/css">
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script type="text/javascript" src="gallery_generator.js"></script>
 </head>
 
 <body>
@@ -27,8 +30,8 @@
                     <h1>1</h1>
                     <h1>oca</h1>
                     <h2>Cola</h2>
-                    <h3>Journey</h3>
-                    <p>Refreshing the world, one story at a time</p>
+                    <h3>Custom</h3>
+                    <p>Design your own coke products</p>
                 </a>
             </div>
 
@@ -72,6 +75,7 @@
         <button type="button" onclick="switchScene('sprite')">Sprite</button>
         <button type="button" onclick="switchScene('pepper')">Dr Pepper</button>
     </div>
+    <table id="gallery"></table>
     <div id="home" class="container-fluid main_contents">
         <p>
             This is my first html page with some 3d objects.
@@ -87,7 +91,11 @@
         <div id="interaction">
             <button type="button" onclick="wireframe('can')">WIREFRAME</button>
             <button type="button" onclick="spin('can__model__RotationTimer')">SPIN</button>
-            <button type="button" onclick="lighting()">LIGHTING</button>
+            <button type="button" onclick="light('can__headlight')">HEADLIGHT</button>
+            <!--<button type="button" onclick="light('can__Sun_TRANSFORM')">HEADLIGHT</button>
+            <button type="button" onclick="light('can__Sun_001_TRANSFORM')">HEADLIGHT</button>
+            <button type="button" onclick="light('can__Sun_002_TRANSFORM')">HEADLIGHT</button>
+            <button type="button" onclick="light('can__Sun_003_TRANSFORM')">HEADLIGHT</button>-->
             <button type="button" onclick="changeTexture('Maps/can_texture_sprite.jpg', 'can__test')">Sprite</button>
             <button type="button" onclick="changeTexture('Maps/can_texture.jpg', 'can__test')">Coke</button>
             <button type="button" onclick="camera('can__CA_Camera')">DEFAULT</button>
@@ -104,13 +112,13 @@
         <x3d width='600px' height='400px' id="bottle">
             <scene>
                 <inline nameSpaceName="bottle" mapDEFToID="true" onclick='spin("bottle__model__RotationTimer");'
-                    url="x3d/bottle6.x3d"> </inline>
+                    url="x3d/bottle7.x3d"> </inline>
             </scene>
         </x3d>
         <div id="interaction">
             <button type="button" onclick="wireframe('bottle')">WIREFRAME</button>
             <button type="button" onclick="spin('bottle__model__RotationTimer')">SPIN</button>
-            <button type="button" onclick="lighting()">LIGHTING</button>
+            <button type="button" onclick="light('bottle__headlight')">HEADLIGHT</button>
             <button type="button" onclick="camera('bottle__CA_Camera')">DEFAULT</button>
             <button type="button" onclick="camera('bottle__CA_Front_Cam')">FRONT</button>
             <button type="button" onclick="camera('bottle__CA_Back_Cam')">BACK</button>
@@ -146,6 +154,7 @@
             <div id="interaction">
                 <button type="button" onclick="wireframe('cup')">WIREFRAME</button>
                 <button type="button" onclick="spin('cup__model__RotationTimer')">SPIN</button>
+                <button type="button" onclick="light('cup__headlight')">HEADLIGHT</button>
                 <button type="button" onclick="camera('cup__CA_Camera')">DEFAULT</button>
                 <button type="button" onclick="camera('cup__CA_Front_Cam')">FRONT</button>
                 <button type="button" onclick="camera('cup__CA_Back_Cam')">BACK</button>
@@ -164,7 +173,7 @@
     <nav id="footerColor" class="navbar navbar-expand-sm footer">
         <div class="container-fluid">
             <div class="navbar-text float-left copyright">
-                <p><span class="align-baseline">© 2018 3D Apps | <a href="javascript:changeLook()">Restyle</a> | <a
+                <p><span class="align-baseline"> 3D Apps | <a href="javascript:changeLook()">Restyle</a> | <a
                             href="javascript:changeBack()">Reset</a></span></p>
             </div>
     </nav>

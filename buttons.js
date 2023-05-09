@@ -36,7 +36,7 @@ function wireframe(id)
 	e.runtime.togglePoints(true);
 }
 
-var lightOn = true;
+var lightOn = false;
 
 function light(id)
 {
