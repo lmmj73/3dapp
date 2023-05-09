@@ -4,6 +4,7 @@
     <head> 
         <title>My first X3DOM page</title> 			
         <script type='text/javascript' src='http://www.x3dom.org/download/x3dom.js'> </script> 
+        <script type='text/javascript' src='buttons.js'> </script> 
         <link rel='stylesheet' type='text/css' href='http://www.x3dom.org/download/x3dom.css'></link> 
     </head> 
     <body>
@@ -41,16 +42,6 @@
             document.getElementById('model__Camera02').setAttribute('bind', 'true');
             }
             
-	
-    function changeColor(col)
-	{
-		document.getElementById('body_color').setAttribute("diffuseColor", col);
-	}
-
-    function changeTexture(tex)
-	{
-		document.getElementById('rim_tex').setAttribute("url", tex);
-	}
   
         </script>
         <h1>Hello, X3DOM!</h1> 
@@ -69,10 +60,10 @@
         </x3d>
         <div id="interaction">
             <button type="button" onclick="spin()">SPIN</button>
-            <button type="button" onclick="wireframe()">WIREFRAME</button>
+            <button type="button" onclick="wireFrame()">WIREFRAME</button>
             <button type="button" onclick="lighting()">LIGHTING</button>
             <button type="button" onclick="cam1()">FRONT</button>
-            <button type="button" onclick="cam2()">BACK2</button>
+            <button type="button" onclick="cam2()">BACK</button>
             </div>
         <x3d width='600px' height='400px'> 
             <scene> 
