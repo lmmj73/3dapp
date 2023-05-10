@@ -46,8 +46,8 @@ $(document).ready(function(){
        $('#description_pepper').html('<p>' + jsonObj.pageTextData[6].description + '</p>');
        
        //Get the gallery contents data
-       $('.title_gallery').html('<h2>' + jsonObj.pageTextData[7].galleryTitle + '<h2>');
-       $('.description_gallery').html('<p>' + jsonObj.pageTextData[7].galleryDescription + '</p>');
+       $('#title_gallery').html('<h2>' + jsonObj.pageTextData[7].galleryTitle + '<h2>');
+       $('#description_gallery').html('<p>' + jsonObj.pageTextData[7].galleryDescription + '</p>');
 
        //Get camera contents data
        /*$('.x3dCameraTitle').html('<h2>' + jsonObj.pageTextData[8].CameraTitle + '<h2>');

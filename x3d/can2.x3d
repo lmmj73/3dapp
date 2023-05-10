@@ -15,6 +15,7 @@
 		<Background DEF="WO_World"
 		            groundColor="0.051 0.051 0.051"
 		            skyColor="0.051 0.051 0.051"
+					transparency="1"
 		            />
 		<Transform DEF="Camera_TRANSFORM"
 		           translation="0 5 -12"

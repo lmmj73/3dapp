@@ -15,6 +15,7 @@
 		<Background DEF="WO_World"
 		            groundColor="0.051 0.051 0.051"
 		            skyColor="0.051 0.051 0.051"
+					transparency="1"
 		            />
 		<Transform DEF="Camera_TRANSFORM"
 		           translation="-16.437611 10.729316 -15.035255"
@@ -54,7 +55,7 @@
 							          shininess="0.500"
 							          transparency="0.0"
 							          />
-							<ImageTexture id="label" url='"Maps/sprite_texture.jpg"'/>
+							<ImageTexture id="label" url='"Maps/sprite_label.jpg"'/>
 						</Appearance>
 						<IndexedFaceSet solid="false"
 						                creaseAngle="4.0000"

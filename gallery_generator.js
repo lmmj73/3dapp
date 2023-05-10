@@ -2,7 +2,7 @@
 // Create the XMLHttpRequest object for communicating with the web server
 var xmlhttp = new XMLHttpRequest();
 // Stores number of horizontalColumns gallery has, if too large it won't fit in browser window
-var numberOfColumns = 4;
+var numberOfColumns = 2;
 // stores newly generated gallery HTML code
 var htmlcode = "";
 // Temporarily stores server response while code is generated

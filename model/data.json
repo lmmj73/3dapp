@@ -2,7 +2,7 @@
     "pageTextData": [
         {
         "title": "Coca Cola Great Britain",
-        "subtitle": "Founded in 1886 Dr John S Penberton",
+        "subTitle": "Founded in 1886 Dr John S Penberton",
         "description": "The Coca Cola Company is the world's leading manufacturer, marketer and 400 brands."
         },
         {
@@ -12,7 +12,7 @@
         },
         {
         "title": "Sprite",
-        "subtitle": "West Germany, 1959",
+        "subTitle": "West Germany, 1959",
         "description": "First introduced in 1961, crisp, refreshing, clean-tasting Sprite is no different countries. Sprite Zero, part of our no sugar Zero range, offers the delicious"
         },
         {
@@ -24,7 +24,7 @@
         "x3dModelTitle": "Coca Cola X3D Model",
         "x3dCreationMethod": "This X3D model of the coke can has been created in 3ds Max, exporonline.",
         "title": "History of Coca Cola",
-        "subtitle": "Atlanta Beginnings",
+        "subTitle": "Atlanta Beginnings",
         "description": "It was 1886, and in New York Harbour, workers were constructing the Sta be unveiled. Like many people who change history, John Pemberton, an Atlanta pharmacist caramel-coloured liquid and, when it was done, he carried it a few doors down to Jacobs customers who all agreed - this new drink was something special. So Jacobs' Pharmacy pu"
         },
         {
@@ -38,12 +38,12 @@
         "x3dModelTitle": "Dr Pepper X3D Model",
         "x3dCreationMethod": "This X3D model of the pepper cup has been created in 3ds Max, exp display online.",
         "title": "Dr Pepper-Liquid Sunshine",
-        "subtitle": "23 fruit flavours",
+        "subTitle": "23 fruit flavours",
         "description": "Dr Pepper's unique, sparkling blend of 23 fruit flavours has been aroun just can't quite put your tongue on. It was created by Texas pharmacist Charles Alderto owner, and Mr Morrison instantly agreed to stock the drink. The distinctive, bold taste"
         },
         {
-        "galleryTitle": "30 Images",
-        "galleryDescription": "These 30 images of the Coke can, Sprite bottle and Dr Pepper cup",
+        "galleryTitle": "3D Renders",
+        "galleryDescription": "These Models were created and rendered in Blender",
         "CameraTitle": "Camera Views",
         "CameraSubtitle": "These buttons select a range of X3D model viewpoints"
         }

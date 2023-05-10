@@ -28,6 +28,10 @@ body {
     always a good idea to be abole to switch a border on and off */
     /* border: 1px solid rgb(39, 36, 36); */
 }
+.col-sm-4 {
+    flex: 0 0 25%;
+    max-width: 25%;
+}
 
 /* Some simple CSS rules for styling p, h1 to h6, etc. in the main contents container */
 p {
@@ -75,7 +79,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .card {
-    border: 1px solid rgba(0, 0, 0, 0.125);
+    border: 10px solid rgba(0, 0, 0, 0.125);
     /* border-radius: .25rem;*/
     margin-top: 10px;
     margin-bottom: 10px;
@@ -381,7 +385,7 @@ h1, h2, h3, h4, h5, h6 {
     }
 
     .card {
-        border: 0px solid rgba(0,0,0,.125);
+        border: 10px solid rgba(0,0,0,.125);
         /* border-radius: .25rem;*/
         margin-top: 10px;
         margin-bottom: 10px;
@@ -528,6 +532,10 @@ h1, h2, h3, h4, h5, h6 {
     }
 
     .card {
+        border: 10px solid rgba(0,0,0,.125);
+        /* border-radius: .25rem;*/
+        margin-top: 10px;
+        margin-bottom: 10px;
         background-color: rgb(192, 224, 236);
     }
 
@@ -563,6 +571,10 @@ h1, h2, h3, h4, h5, h6 {
     }
 
     .card {
+        border: 10px solid rgba(0,0,0,.125);
+        /* border-radius: .25rem;*/
+        margin-top: 10px;
+        margin-bottom: 10px;
         background-color: rgb(228, 240, 208);
     }
 
@@ -584,7 +596,11 @@ h1, h2, h3, h4, h5, h6 {
     }
 
     .card {
-        background-color: rgb(232, 236, 163);
+        border: 10px solid rgba(0,0,0,.125);
+        /* border-radius: .25rem;*/
+        margin-top: 10px;
+        margin-bottom: 10px;
+        background-color: rgb(236, 197, 124);
     }
 
  }

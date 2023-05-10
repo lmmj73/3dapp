@@ -1,6 +1,6 @@
 <?php
 //Specify the path to the thumbnail images
-$directory = './x3d/Maps';
+$directory = './Renders';
 // Only load files with the following extensions
 $allowed_extensions = array('jpg','jpeg','gif','png');
 // An array used to separate the extension from each file

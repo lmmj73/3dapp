@@ -1,19 +1,17 @@
 #gallery {
     float: right;
-    width:50px;
 }
 
 #gallery_cell {
     padding:0px;
     background: ivory;
-    border: 1px solid red;
+    border: 5px solid #C00;
     min-width: 100px;
     height: 80px;
     text-align: center;
-    border: 10px;
 }
 
 #image_thumbnail {
-    max-width: 100px;
-    max-height: 80px;
+    max-width: 600px;
+    max-height: 400px;
 }

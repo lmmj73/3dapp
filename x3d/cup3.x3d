@@ -15,6 +15,7 @@
 		<Background DEF="WO_World"
 		            groundColor="0.051 0.051 0.051"
 		            skyColor="0.051 0.051 0.051"
+					transparency="1"
 		            />
 		<Transform DEF="Light_TRANSFORM"
 		           translation="-4.076245 5.903862 1.005454"
