@@ -34,7 +34,6 @@ $(document).ready(function () {
             }
             htmlcode + '</tr>';
             document.getElementById('gallery').innerHTML = htmlcode;
-            console.log(htmlcode);
         }
     }
 });

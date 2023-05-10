@@ -7,14 +7,26 @@ function switchScene(id){
 	document.getElementById(id).style.display = 'block';
 }
 
-var spinning = false;
+var spinning = true;
 
-function spin(id)
+/*function spin(id)
 {
 	spinning = !spinning;
 	document.getElementById(id).setAttribute('enabled', spinning.toString());
+}*/
+function spin(id, id2 , rot)
+{
+	//spinning = !spinning;
+	spinning = true;
+	document.getElementById(id2).setAttribute('keyValue', rot);
+	document.getElementById(id).setAttribute('enabled', spinning.toString());
 }
 
+function stopRotation(id)
+{
+	spinning = false;
+	document.getElementById(id).setAttribute('enabled', spinning.toString());
+}
 
 
 function animateModel(id)
@@ -23,10 +35,6 @@ function animateModel(id)
         document.getElementById(id).setAttribute('enabled', 'true');
     else
         document.getElementById(id).setAttribute('enabled', 'false');
-}
-
-function spin2(id){
-    document.getElementById(id).setRotation(180);
 }
 
 function wireframe(id)
