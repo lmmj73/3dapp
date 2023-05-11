@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html>
+<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+
+<head>
+    <title>Coca-Cola 3D</title>
+    <script src="js/jquery-3.5.1.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="https://kit.fontawesome.com/273bac5610.js" crossorigin="anonymous"></script>
+    <script type='text/javascript' src='http://www.x3dom.org/download/x3dom.js'> </script>
+    <script type='text/javascript' src='js/buttons.js'> </script>
+    <link rel='stylesheet' type='text/css' href='http://www.x3dom.org/download/x3dom.css'>
+    </link>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/custom2.css">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
+    <link href="css/gallery.css" rel="stylesheet" type="text/css">
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script type="text/javascript" src="js/gallery_generator.js"></script>
+    <script type="text/javascript" src="js/swap_restyle.js"></script>
+    <script src="js/getJsonData.js"></script>
+</head>
+
+<body id="bodyColor">
+    <nav id="headerColor" class="navbar sticky-top navbar-expand-sm navbar_coca_cola">
+        <div class="container-fluid">
+            <div class="logo">
+                <a class="navbar-brand">
+                    <h1>1</h1>
+                    <h1>oca</h1>
+                    <h2>Cola</h2>
+                    <h3> Custom</h3>
+                </a>
+            </div>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <!-- Links -->
+                <ul class="navbar-nav ml-auto"> 
+                    <li class="nav-item">
+                        <a class="nav-link active" id="navHome">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="navAbout" data-toggle="popover" data-trigger="hover"
+                            data-placement="bottom" title=""
+                            data-content="3D Apps is a final year and postgraduate module ..."
+                            data-original-title="About Web 3D Applications">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="navModels">Models</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" onclick="changeLook()">Restyle</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" onclick="changeBack()"">Reset</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+            <div id="about">
+                <h1>Please watch this short video to learn more about coke</h1>
+                <iframe width="1280" height="720" src="https://www.youtube.com/embed/VGa1imApfdg"
+                    title="Coca-Cola® Masterpiece" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen></iframe>
+            </div>
+
+            <div id="home" class="container-fluid main_contents">
+                <div class="card">
+                    <div id="title_home"></div>
+                    <div id="subTitle_home"></div>
+                    <div id="description_home"></div>
+                </div>
+                <div id="URL_home"></div>
+                <div class="row">
+                    <div class="col-sm-4">
+                        <div class="card">
+                            <div id="title_left"></div>
+                            <div id="subTitle_left"></div>
+                            <div id="description_left"></div>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="card">
+                            <div id="title_centre"></div>
+                            <div id="subTitle_centre"></div>
+                            <div id="description_centre"></div>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="card">
+                            <div id="title_right"></div>
+                            <div id="subTitle_right"></div>
+                            <div id="description_right"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="models">
+                <div id="interaction">
+                    <button type="button" id="navCoke">Coke</button>
+                    <button type="button" id="navSprite">Sprite</button>
+                    <button type="button" id="navPepper">Dr Pepper</button>
+                    <button type="button" id="navCosta">Costa Coffee</button>
+                </div>
+                <div class="row" id="coke">
+                    <div class="col-sm-6">
+                        <div class="card">
+                            <x3d id="can">
+                                <scene>
+                                    <inline nameSpaceName="can" mapDEFToID="true" url="x3d/can2.x3d"> </inline>
+                                </scene>
+                            </x3d>
+                        </div>
+                    </div>
+                    <div id="interaction" class="col-sm-2">
+                        <div class="card">
+                            <h2>Rotation</h2>
+                            <button type="button"
+                                onclick="spin('can__model__RotationTimer','can__Rotator','0 1 0 0  0 1 0 1.57079 0 1 0 3.14159  0 1 0 4.71239  0 1 0 6.28317')">SPIN
+                                X</button>
+                            <button type="button"
+                                onclick="spin('can__model__RotationTimer','can__Rotator','1 0 0 0  1 0 0 1.57079 1 0 0 3.14159  1 0 0 4.71239  1 0 0 6.28317')">SPIN
+                                Y</button>
+                            <button type="button"
+                                onclick="spin('can__model__RotationTimer','can__Rotator','0 0 1 0  0 0 1 1.57079 0 0 1 3.14159  0 0 1 4.71239  0 0 1 6.28317')">SPIN
+                                Z</button>
+                            <button type="button" onclick="stopRotation('can__model__RotationTimer')">STOP</button>
+                        </div>
+                    </div>
+                    <div id="interaction" class="col-sm-2">
+                        <div class="card">
+                            <h2>Cameras</h2>
+                            <button type="button" onclick="camera('can__CA_Camera')">DEFAULT</button>
+                            <button type="button" onclick="camera('can__CA_Front_Cam')">FRONT</button>
+                            <button type="button" onclick="camera('can__CA_Back_Cam')">BACK</button>
+                            <button type="button" onclick="camera('can__CA_Left_Cam')">LEFT</button>
+                            <button type="button" onclick="camera('can__CA_Right_Cam')">RIGHT</button>
+                            <button type="button" onclick="camera('can__CA_Top_Cam')">TOP</button>
+                            <button type="button" onclick="camera('can__CA_Bottom_Cam')">BOTTOM</button>
+                        </div>
+                    </div>
+                    <div id="interaction" class="col-sm-2">
+                        <div class="card">
+                            <h2>Other</h2>
+                            <button type="button" onclick="light('can__headlight')">HEADLIGHT</button>
+                            <button type="button" onclick="wireframe('can')">WIREFRAME</button>
+                            <button type="button"
+                                onclick="changeTexture('Maps/can_texture_sprite.jpg', 'can__test')">SPRITE</button>
+                            <button type="button"
+                                onclick="changeTexture('Maps/can_texture.jpg', 'can__test')">COKE</button>
+                            <button type="button"
+                                onclick="changeTexture('Maps/can_texture_dr_pepper.jpg', 'can__test')">DR
+                                PEPPER</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="row" id="sprite">
+                    <div class="col-sm-6">
+                        <div class="card">
+                            <x3d id="bottle">
+                                <scene>
+                                    <inline nameSpaceName="bottle" mapDEFToID="true" url="x3d/bottle7.x3d"> </inline>
+                                </scene>
+                            </x3d>
+                        </div>
+                    </div>
+                    <div id="interaction" class="col-sm-2">
+                        <div class="card">
+                            <h2>Rotation</h2>
+                            <button type="button"
+                                onclick="spin('bottle__model__RotationTimer','bottle__Rotator','0 1 0 0  0 1 0 1.57079 0 1 0 3.14159  0 1 0 4.71239  0 1 0 6.28317')">SPIN
+                                X</button>
+                            <button type="button"
+                                onclick="spin('bottle__model__RotationTimer','bottle__Rotator','1 0 0 0  1 0 0 1.57079 1 0 0 3.14159  1 0 0 4.71239  1 0 0 6.28317')">SPIN
+                                Y</button>
+                            <button type="button"
+                                onclick="spin('bottle__model__RotationTimer','bottle__Rotator','0 0 1 0  0 0 1 1.57079 0 0 1 3.14159  0 0 1 4.71239  0 0 1 6.28317')">SPIN
+                                Z</button>
+                            <button type="button" onclick="stopRotation('bottle__model__RotationTimer')">STOP</button>
+                        </div>
+                    </div>
+                    <div id="interaction" class="col-sm-2">
+                        <div class="card">
+                            <h2>Cameras</h2>
+                            <button type="button" onclick="camera('bottle__CA_Camera')">DEFAULT</button>
+                            <button type="button" onclick="camera('bottle__CA_Front_Cam')">FRONT</button>
+                            <button type="button" onclick="camera('bottle__CA_Back_Cam')">BACK</button>
+                            <button type="button" onclick="camera('bottle__CA_Left_Cam')">LEFT</button>
+                            <button type="button" onclick="camera('bottle__CA_Right_Cam')">RIGHT</button>
+                            <button type="button" onclick="camera('bottle__CA_Top_Cam')">TOP</button>
+                            <button type="button" onclick="camera('bottle__CA_Bottom_Cam')">BOTTOM</button>
+                        </div>
+                    </div>
+                    <div id="interaction" class="col-sm-2">
+                        <div class="card">
+                            <h2>Other</h2>
+                            <button type="button" onclick="light('bottle__headlight')">HEADLIGHT</button>
+                            <button type="button" onclick="wireframe('bottle')">WIREFRAME</button>
+                            <button type="button"
+                                onclick="changeTexture('Maps/sprite_label.jpg', 'bottle__label')">SPRITE LABEL</button>
+                            <button type="button" onclick="changeTexture('Maps/pepper_label.jpg', 'bottle__label')">DR
+                                PEPPER LABEL</button>
+                            <button type="button" onclick="changeTexture('Maps/coke_label.jpg', 'bottle__label')">COKE LABEL</button>
+                            <button type="button"
+                                onclick="changeColor('0.100 0.900 0.400', 'bottle__MA_Material_002')">DEFAULT BOTTLE
+                                COLOUR</button>
+                            <button type="button"
+                                onclick="changeColor('0.100 0.400 0.900', 'bottle__MA_Material_003')">DEFAULT LID
+                                COLOUR</button>
+                            <input type="color" id="color-picker" name="color-picker"
+                                oninput="changeColor(this.value, 'bottle__MA_Material_002')">
+                            <input type="color" id="color-picker" name="color-picker"
+                                oninput="changeColor(this.value, 'bottle__MA_Material_003')">
+                            <div class="slidecontainer">
+                                <input type="range" min="0" max="1" step="0.01" value="0.5" class="slider" id="slider"
+                                    oninput="changeOpacity(1-this.value, 'bottle__MA_Material_002');">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row" id="pepper">
+                    <div class="col-sm-6">
+                        <div class="card">
+                            <x3d id="cup">
+                                <scene>
+                                    <inline nameSpaceName="cup" mapDEFToID="true" url="x3d/cup3.x3d"> </inline>
+                                </scene>
+                            </x3d>
+                        </div>
+                    </div>
+                    <div id="interaction" class="col-sm-2">
+                        <div class="card">
+                            <h2>Rotation</h2>
+                            <button type="button"
+                                onclick="spin('cup__model__RotationTimer','cup__Rotator','0 1 0 0  0 1 0 1.57079 0 1 0 3.14159  0 1 0 4.71239  0 1 0 6.28317')">SPIN
+                                X</button>
+                            <button type="button"
+                                onclick="spin('cup__model__RotationTimer','cup__Rotator','1 0 0 0  1 0 0 1.57079 1 0 0 3.14159  1 0 0 4.71239  1 0 0 6.28317')">SPIN
+                                Y</button>
+                            <button type="button"
+                                onclick="spin('cup__model__RotationTimer','cup__Rotator','0 0 1 0  0 0 1 1.57079 0 0 1 3.14159  0 0 1 4.71239  0 0 1 6.28317')">SPIN
+                                Z</button>
+                            <button type="button" onclick="stopRotation('cup__model__RotationTimer')">STOP</button>
+                        </div>
+                    </div>
+                    <div id="interaction" class="col-sm-2">
+                        <div class="card">
+                            <h2>Cameras</h2>
+                            <button type="button" onclick="camera('cup__CA_Camera')">DEFAULT</button>
+                            <button type="button" onclick="camera('cup__CA_Front_Cam')">FRONT</button>
+                            <button type="button" onclick="camera('cup__CA_Back_Cam')">BACK</button>
+                            <button type="button" onclick="camera('cup__CA_Left_Cam')">LEFT</button>
+                            <button type="button" onclick="camera('cup__CA_Right_Cam')">RIGHT</button>
+                            <button type="button" onclick="camera('cup__CA_Top_Cam')">TOP</button>
+                            <button type="button" onclick="camera('cup__CA_Bottom_Cam')">BOTTOM</button>
+                        </div>
+                    </div>
+                    <div id="interaction" class="col-sm-2">
+                        <div class="card">
+                            <h2>Other</h2>
+                            <button type="button" onclick="light('cup__headlight')">HEADLIGHT</button>
+                            <button type="button" onclick="wireframe('cup')">WIREFRAME</button>
+                            <button type="button"
+                                onclick="changeTexture('Maps/sprite_texture.jpg', 'cup__text')">SPRITE</button>
+                            <button type="button"
+                                onclick="changeTexture('Maps/coke_label.jpg', 'cup__text')">COKE</button>
+                            <input type="color" id="color-picker" name="color-picker"
+                                oninput="changeColor(this.value, 'cup__MA_Material_002')">
+                            <button type="button" onclick="changeColor('1 1 1', 'cup__MA_Material_002')">DEFAULT
+                                COLOUR</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="row" id="costa">
+                    <div class="col-sm-6">
+                        <div class="card">
+                            <x3d id="mug">
+                                <scene>
+                                    <inline nameSpaceName="mug" mapDEFToID="true" url="x3d/mug.x3d"></inline>
+                                </scene>
+                            </x3d>
+                        </div>
+                    </div>
+                    <div id="interaction" class="col-sm-2">
+                        <div class="card">
+                            <h2>Rotation</h2>
+                            <button type="button"
+                                onclick="spin('mug__model__RotationTimer','mug__Rotator','0 1 0 0  0 1 0 1.57079 0 1 0 3.14159  0 1 0 4.71239  0 1 0 6.28317')">SPIN
+                                X</button>
+                            <button type="button"
+                                onclick="spin('mug__model__RotationTimer','mug__Rotator','1 0 0 0  1 0 0 1.57079 1 0 0 3.14159  1 0 0 4.71239  1 0 0 6.28317')">SPIN
+                                Y</button>
+                            <button type="button"
+                                onclick="spin('mug__model__RotationTimer','mug__Rotator','0 0 1 0  0 0 1 1.57079 0 0 1 3.14159  0 0 1 4.71239  0 0 1 6.28317')">SPIN
+                                Z</button>
+                            <button type="button" onclick="stopRotation('mug__model__RotationTimer')">STOP</button>
+                        </div>
+                    </div>
+                    <div id="interaction" class="col-sm-2">
+                        <div class="card">
+                            <h2>Cameras</h2>
+                            <button type="button" onclick="camera('mug__CA_Camera')">DEFAULT</button>
+                            <button type="button" onclick="camera('mug__CA_Back_Cam')">FRONT</button>
+                            <button type="button" onclick="camera('mug__CA_Front_Cam')">BACK</button>
+                            <button type="button" onclick="camera('mug__CA_Right_Cam')">LEFT</button>
+                            <button type="button" onclick="camera('mug__CA_Left_Cam')">RIGHT</button>
+                            <button type="button" onclick="camera('mug__CA_Top_Cam')">TOP</button>
+                            <button type="button" onclick="camera('mug__CA_Bottom_Cam')">BOTTOM</button>
+                        </div>
+                    </div>
+                    <div id="interaction" class="col-sm-2">
+                        <div class="card">
+                            <h2>Other</h2>
+                            <button type="button" onclick="light('mug__headlight')">HEADLIGHT</button>
+                            <button type="button" onclick="wireframe('mug')">WIREFRAME</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <table id="gallery">
+                <div id="title_gallery"></div>
+                <div id="description_gallery"></div>
+            </table>
+            <nav id="footerColor" class="navbar navbar-expand-sm footer">
+                <div class="container-fluid">
+                    <div class="navbar-text float-left copyright">
+                        <p><span class="align-baseline"> 3D Apps 2023</span></p>
+                    </div>
+                </div>
+            </nav>
+</body>
+
+</html>
