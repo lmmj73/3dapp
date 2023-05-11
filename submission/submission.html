@@ -1,0 +1,223 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>3D App Submission Template</title>
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <!-- Font awesome fonts, both css and js versions installed, js SVG versions will override if they are available -->
+    <!-- Font Awesome Webfonts -->
+    <link rel="stylesheet" href="../lab1_2022/css/all.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/custom.css">
+
+  </head>
+  <body>
+    <nav class="navbar sticky-top navbar-expand-sm navbar_submission"> 
+      <div class="container-fluid">    
+        <!-- Brand -->
+        <h1 class="navbar-brand">3D App Submission Template</h1>
+
+        <!-- Three bar icon that appears when page is shrunk, collapses the navigation links, note data target is the id selector #navbarSupportedContent -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        
+        <!-- Link Menu item button to the links class navbar-collapse id selector #navbarSupportedContent -->
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <!-- The Links -->
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item">
+                <!-- STUDENT INPUT ENTRY -->
+                <!--******************************************************************************************************************
+                PLEASE CHANGE THE HREF URL FOR YOUR SPECIFIC 3D App URL TO ACCESS YOUR 3D App-->
+                <a href="https://users.sussex.ac.uk/lm703/3dapp/assignment/index.html" class="btn btn-primary">My 3D App</a>
+                <!--*******************************************************************************************************************-->
+              </li>
+              <li class="nav-item">
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#soaModal">Statement of Originality</button>
+              </li>
+              <!-- Dropdown Menu for additional submission links -->
+              <li class="nav-item dropdown">
+                <button class="btn dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Summary Submission Instructions
+                </button>
+                <div class="dropdown-menu">
+                  <!-- STUDENT INPUT ENTRY -->
+                  <!--******************************************************************************************************************
+                  PLEASE CHANGE THE HREF URL FOR YOUR SPECIFIC 3D App and GITHUB URLs TO ACCESS YOUR 3D App, Codebase and VRML/X3D MODELS-->
+                  <a class="dropdown-item" href="https://canvas.sussex.ac.uk/courses/23366/pages/e-submission-instructions">Instructions</a>
+                  <a class="dropdown-item" href="https://users.sussex.ac.uk/lm703/3dapp/assignment/index.html">3D App</a>
+                  <a class="dropdown-item" href="https://github.com/lmmj73/3dapp/tree/master">GitHub Codebase</a>
+                  <a class="dropdown-item" href="https://github.com/lmmj73/3dapp/tree/master/assignment/x3d">GitHub 3D Models</a>
+                  <!--*******************************************************************************************************************-->
+                  <a class="dropdown-item" href="submission.html">Deeper Understanding</a>
+                  <a class="dropdown-item" href="submission.html">Last Submission File</a>
+                </div>
+              </li>
+            </ul>
+        </div> 
+      </div>
+    </nav>
+
+    <div class="container">
+      <div class="row row-cols-1">
+        <div class="col">
+          <div class="card">
+            <h4 class="card-header">Detailed Submission Instructions</h4>
+            <div class="card-body">
+              <h5 class="card-title">There are 10 marks awarded for managing your codebase in GitHub and correctly publishing your 3D App</h5>
+              <p class="card-text">See the <b>marking rubric</b>  for details on how to achieve these 10 marks. <b>To be awarded these 10 Marks you must provide correct links and information requested on this submission template.</b></p>
+              <a href="https://canvas.sussex.ac.uk/courses/23366/pages/e-submission-instructions" class="btn">Submission Instructions</a>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card">
+            <h4 class="card-header">My 3D App</h4>
+            <div class="card-body">
+              <!-- Substitute your 3D App link for mine -->
+              <h5 class="card-title">You must link your 3D App URL to the My 3D App button below</h5>
+              <p class="card-text"><b></b> You will have a URL similar to this: <b>https://users.sussex.ac.uk/~username/3dapp/assignment/index.php/myview/</b>, where '3dapp' is the folder in the root of your public_html directory, 'assignment' is the folder where your 3D App is published and 'myview' will be your MVC view for your 3D App.</p>
+              <!-- STUDENT INPUT ENTRY -->
+              <!--******************************************************************************************************************
+              PLEASE CHANGE THE HREF URL FOR YOUR SPECIFIC 3D App URL TO ACCESS YOUR 3D App-->
+              <a href="https://users.sussex.ac.uk/lm703/3dapp/assignment/index.html" class="btn btn-primary">My 3D App</a>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card">
+            <h4 class="card-header">My 3D App GitHub Codebase</h4>
+            <div class="card-body">
+              <h5 class="card-title">You must link your 3D App GitHub Codebase URL to the button below</h5>
+              <p class="card-text">You will have a GitHub Codebase URL similar to this: <b>https://github.com/username/3dapp/assignment</b>, which should reflect the path to your assignment code in your GitHub folder</p>             
+              <!-- STUDENT INPUT ENTRY -->
+              <!--******************************************************************************************************************
+              PLEASE CHANGE THE HREF URL FOR YOUR SPECIFIC GITHUB URL TO ACCESS YOUR 3D App CODEBASE-->
+              <a href="https://github.com/lmmj73/3dapp/tree/master" class="btn btn-primary">My 3D App Codebase</a>
+              <!--*******************************************************************************************************************-->
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card">
+            <h4 class="card-header">My 3D App GitHub 3D Models</h4>
+            <div class="card-body">
+              <h5 class="card-title">You must link your 3D App GitHub X3D Models URL to the button below</h5>
+              <p class="card-text">You will have a GitHub X3D Model URL similar to this: <b>https://github.com/username/3dapp/assignment/application/assests/x3d</b>, which should reflect the path to your assignment X3D Models in your GitHub folder</p>
+              <!-- STUDENT INPUT ENTRY -->
+              <!--**************************************************************************************
+              PLEASE CHANGE THE HREF URL FOR YOUR SPECIFIC GITHUB URL TO ACCESS YOUR 3X3D or VRML 3D MODELS-->
+              <a href="https://github.com/lmmj73/3dapp/tree/master/assignment/x3d" class="btn btn-primary">My VRML/X3D Models</a>
+              <!--***************************************************************************************-->
+            </div>
+          </div>
+        </div>
+        <div class="col">            
+          <div class="card">
+            <h4 class="card-header">My 3D App Deeper Understanding</h4>
+            <div class="card-body">
+              <h5 class="card-title">You must list here your Deeper Understanding components of your 3D App</h5>
+              <p class="card-text"><b>List here those components of your 3D App module where you feel you should score 'Deeper Understanding' marks</b> according to the specified rubric. Some examples are given, you may list more than 4, but a maximum 4 x 5 Marks will be awarded.</p>
+              <ul>                
+                <!-- STUDENT INPUT ENTRY -->
+                <!--**************************************************************************************
+                  PLEASE EDIT THE PARAGRAPH TAGS BELOW TO INPUT YOUR CLAIMED DEEPER UNDERSTANDING MARKS
+                ******************************************************************************************-->
+                <li><p class="card-text">I have used Blender to model, render and export my X3D files</p></li>
+                <li><p class="card-text">Since Blender cannot export materials or textures to X3D I edited the X3D files to add these</p></li>
+                <li><p class="card-text">I made a costa branded coffee mug which I then integrated into my website</p></li>
+                <li><p class="card-text">I integrated html colour pickers to change attributes of the models using javascript</p></li>
+                <li><p class="card-text">I also did this with an html slider bar to ajust transparency of the sprite bottle</p></li>
+                <li><p class="card-text">I used quaternion values to have the model rotate on all 3 axis</p></li>
+                <li><p class="card-text">I used javascript to allow the user to change the textures on models. These were edited in paint 3D to fit each specific model</p></li>
+                <li><p class="card-text">I used bootstap and css to style my page</p></li>
+                <li><p class="card-text">I used ajax and php for the image gallery</p></li>
+                <li><p class="card-text">I used jquery for content swapping</p></li>
+                <li><p class="card-text">I used json files to store data for the model</p></li>
+                <!--***************************************************************************************-->
+
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card">
+            <h4 class="card-header">My 3D App ITS Web Server Date and Time of Last File Uploaded</h4>
+            <div class="card-body">
+              <h5 class="card-title">You must provide evidence of the date and time that you uploaded your 3D App to the ITS Web Server</h5>
+              <p class="card-text">This can be done by using several different methods, e.g. <b>FileZila's Server > Search Remote Files</b> Utility or using a <b>shell script on the command line</b>, to search for files after the deadline. Further instructions are provided in Canvas accessed by the instruction button below.</p>
+              <ul>
+                <!-- STUDENT INPUT ENTRY -->
+                <!--**************************************************************************************
+                PLEASE EDIT THE PARAGRAPH TAGS BELOW TO INPUT YOUR LAST FILE UPLOADED FILENAME, DATE AND TIME
+                ******************************************************************************************-->
+                <li><p class="card-text"><b>Last File Uploaded Filename</b>: index.html</p></li>
+                <li><p class="card-text"><b>Date Uploaded</b>: 11/05/2023</p></li>
+                <li><p class="card-text"><b>Time Uploaded</b>: 12:52:13</p></li>
+                <!--***************************************************************************************-->
+              </ul>
+              <a href="https://canvas.sussex.ac.uk/courses/23366/pages/instructions-for-finding-last-file-uploaded" class="btn btn-primary">Instructions for finding Last FIle Uploaded</a>
+            </div>
+          </div>           
+        </div>
+      </div>
+    </div>
+
+    <!-- The Modal -->
+    <div class="modal" id="soaModal">
+      <div class="modal-dialog">
+        <div class="modal-content">
+
+          <!-- Modal Header -->
+          <div class="modal-header">
+            <h4 class="modal-title">Statement of Originality</h4>
+            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+          </div>
+
+          <!-- Modal body -->
+          <div class="modal-body">
+            <!-- STUDENT INPUT ENTRY -->
+            <!--**************************************************************************************
+            PLEASE EDIT THE PARAGRAPH TAGS BELOW TO UPDATE YOUR STATEMENT OF ORIGINALITY
+            ******************************************************************************************-->
+            <p>This assignment is submitted as part requirement for the degree of Computer Science at the University of Sussex. It is the product of my own labour except where indicated in the accompanying codebase. This assignment may be freely copied and distributed provided the source is acknowledged. I hereby give permission for a copy of this assignment to be loaned out to students in future years.</p>
+            <!--***************************************************************************************-->
+          </div>
+
+          <!-- Modal footer -->
+          <div class="modal-footer">
+            <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+          </div>
+
+        </div>
+      </div>
+    </div>
+    
+    <nav class="navbar navbar-expand-sm footer">
+      <div class="container-fluid"> 
+        <div class="footerInfo">
+          <!--Replace my name with your name-->
+          <p><span class="align-baseline">Louis Murphy</span></p>
+        </div>       
+        <div class="social">
+          <!-- Insert a link to your GitHub Codebase repository -->
+          <a href="https://github.com/lmmj73/3dapp/tree/master"><i class="fab fa-github fa-2x fa-pull-right"></i></a>
+          <!-- Insert a link to your GitHub X3D model repository -->
+          <a href="https://github.com/lmmj73/3dapp/tree/master/assignment/x3d"><i class="fab fa-github-square fa-2x fa-pull-right"></i></a>
+        </div>
+      </div>
+    </nav>
+
+    <!--
+    script src="js/all.js"></script>
+    -->
+    <script src="js/bootstrap.bundle.js"></script>
+
+  </body>
+</html>

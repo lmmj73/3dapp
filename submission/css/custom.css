@@ -1,0 +1,344 @@
+/* Method to declare your own fonts */
+@font-face {
+    font-family: OpenSans;
+    src: url(../assets/fonts/Open_Sans/OpenSans-Regular.ttf);
+}
+
+@font-face {
+    font-family: Oswald;
+    src: url(../assets/fonts/Oswald/static/Oswald-Regular.ttf);
+}
+
+/* X-Small devices (portrait phones, less than 576px)
+   No media query for `xs` since this is the default in Bootstrap
+*/
+    body {
+        background-color: rgb(222, 231, 236);
+    }
+
+    /* Some simple CSS rules for styling p, h1 to h6, etc. in the main contents container */
+    p {
+        font-family: 'OpenSans', sans-serif;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+        font-family: 'Oswald', sans-serif;
+    }
+
+    .card {
+        border: 1px solid rgb(0,0,0);
+        /* border-radius: .25rem;*/
+        margin-top: 10px;
+        margin-bottom: 10px;
+        background-color: rgb(222, 231, 236);
+    }
+
+    .card-header {
+        font-size: 20px;
+        color: #ffffff;
+        background-color: rgb(97, 162, 199);
+        border-bottom: 1px solid #0000ff;
+    }
+
+    .card-title {
+        font-size: 18px;
+        color: #5a7d94;
+    }
+
+    .card-text {
+        font-size: 14px;
+    }
+
+    .card .btn{
+        margin: 2px;
+        background-color: rgb(49, 115, 153);
+        color: #ffffff;
+    }
+
+    /* CSS rule to overwrite the navbar background and border color — again, helps to stop your site looking like a Bootstrap clone! 
+    */
+    .navbar .btn{
+        margin: 2px;
+        background-color: rgb(49, 115, 153);
+        color: #ffffff;
+    }
+
+    .navbar_submission {
+        background-color: rgb(97, 162, 199); /* Set navbar background color */
+        /*border-color: yellow; Sets the navbar border color 
+        border-style: solid;
+        border-width: 0px;*/
+        min-height: 70px;
+        padding-right: 60px;
+    }
+
+    /* CSS rule to overwrite the navbar-brand font color
+    */
+    .navbar_submission .navbar-brand {
+        color: rgb(245, 235, 235);
+        font-size: 26px;
+        padding: 20px;
+    }
+
+    /* CSS rule to overwrite the navbar-brand font hover color
+    */
+    .navbar_submission .navbar-brand:hover {
+        color: rgb(22, 24, 22);
+    }
+
+    /* NAVIGATION MENU
+    */
+ 
+    /* These next two CSS rules control the style of the icon bar */
+    .navbar_submission .navbar-toggler {
+        border-color: rgb(255, 255, 255);
+    }
+
+    .navbar_submission  .navbar-toggler-icon {
+        background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(0, 255, 0, 1.0)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+    }
+
+    .navbar_submission .navbar-toggler {
+        outline: none !important;
+    }
+
+    /* Let's style the dropdown menu
+    */
+
+    .dropdown-menu {
+        text-align: -webkit-left;
+        background-color: #b6e7f3;
+        margin-top: 20px; /* Experiment to move the dropdown menu down */
+    }
+
+    .dropdown-menu .dropdown-item {
+        color: #080808;
+    }
+
+    .dropdown-menu .dropdown-item:hover {
+        color: rgb(255, 255, 255);
+        background-color: rgb(49, 115, 153);
+    }
+
+    /* CSS rule to style the footer */
+    .footer {
+        background-color: rgb(97, 162, 199); /* Set navbar footer background color same as header */
+        height: 50px;
+    }
+
+    .footerInfo > p {
+        background-color: inherit;
+        color: rgb(255, 255, 255);
+        margin: 5px;
+        padding-top: 0px;
+        width: 100%;
+        font-size: 16px;
+    }
+
+    /* Social media icons CSS rules*/
+    .social {
+        margin: 0px;
+        padding: 0px;
+        width: 30%;   
+    }
+
+    .social > a {
+        font-size: 8px;  
+    }
+
+    .social > p {
+        color: rgb(255, 255, 255);
+        font-size: 8px;
+        text-decoration: none;
+    }
+
+    /* CSS rules for the social media font awesome icons */
+
+    .fa-github:before {
+        content: "\f092"; 
+        color: rgb(255, 0, 0);
+        font-size: 1em;
+    }
+
+    .fa-github-square:before {
+        content: "\f092"; 
+        color: yellow;
+        font-size: 1em;
+    }
+
+/* Small devices (landscape phones, 576px and up)*/
+@media (min-width: 576px) { 
+    body {
+        background-color: rgb(222, 231, 236);
+    }
+
+    .card {
+        border: 1px solid rgba(0,0,0);
+        /* border-radius: .25rem;*/
+        margin-top: 10px;
+        margin-bottom: 10px;
+        background-color: rgb(222, 231, 236);
+    }
+
+    .navbar_submission {
+        min-height: 90px;
+    }
+
+    /* Footer information CSS rules */
+    .footer {
+        background-color: rgb(97, 162, 199); /* Set navbar footer background color same as header */     
+        height: 60px;
+    }
+
+    .footerInfo > p {
+        background-color: inherit;
+        color: rgb(255, 255, 255);
+        font-size: 12px;
+    }
+
+    /* Social media icons CSS rules*/
+    .social {
+        padding: 5px;
+    }
+
+    .social > a {
+        font-size: 12px;  
+    }
+
+    .social > p {
+        font-size: 12px;
+    }
+
+    /* CSS rules for the social media font awesome iocns */
+    .fa-twitter-square:before {
+        color: rgb(216, 204, 37);
+    }
+
+    .fa-github-square:before {
+        color: rgb(63, 61, 223);
+    }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) { 
+    
+    body {
+        background-color: rgb(222, 231, 236);
+    }
+
+    .card {
+        border: 1px solid rgba(0,0,0);
+        /* border-radius: .25rem;*/
+        margin-top: 10px;
+        margin-bottom: 10px;
+        background-color: rgb(222, 231, 236);
+    }
+
+    .navbar_submission {
+        min-height: 90px;
+    }
+
+    /* Footer information CSS rules */
+    .footer {
+        background-color: rgb(97, 162, 199); /* Set navbar footer background color same as header */
+        height: 70px;
+    }
+
+    .footerInfo > p {
+        background-color: rgb(97, 162, 199);
+        color: rgb(255, 255, 255);
+        font-size: 16px;
+    }
+
+    /* Social media icons CSS rules*/
+    .social {
+        padding: 5px;
+    }
+
+    .social > a {
+        font-size: 14px;  
+    }
+
+    .social > p {
+        font-size: 14px;
+    }
+
+    /* CSS rules for the social media font awesome iocns */
+    .fa-twitter-square:before {
+        color: rgb(37, 144, 216);
+    }
+
+    .fa-github-square:before {
+        color: rgb(13, 51, 5);
+    }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) { 
+
+    body {
+        background-color: rgb(222, 231, 236);
+    }
+    
+    .card {
+        background-color: rgb(222, 231, 236);
+    }
+
+    /* Footer information CSS rules */
+    .footer {
+        background-color: rgb(97, 162, 199); /* Set navbar footer background color same as header */
+    }
+
+    .footerInfo > p {
+        background-color: rgb(97, 162, 199);
+        color: rgb(255, 255, 255);
+    }
+
+}
+
+/* X-Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) { 
+
+    .footer {
+        background-color: rgb(97, 162, 199); /* Set navbar footer background color same as header */
+    }
+
+    .footerInfo > p {
+        background-color: rgb(97, 162, 199);
+        color: rgb(255, 255, 255);
+    }
+
+    body {
+        background-color: rgb(222, 231, 236);
+    }
+
+    .card {
+        background-color: rgb(222, 231, 236);
+    }
+
+}
+
+/* XX-Large devices (larger desktops, 1400px and up) */
+@media (min-width: 1400px) { 
+    #main_3d_image {
+        height: 600px;
+    }
+
+    .footer {
+        background-color: rgb(97, 162, 199); /* Set navbar footer background color same as header */
+    }
+
+    .footerInfo > p {
+        background-color: rgb(97, 162, 199);
+        color: rgb(255, 255, 255);
+    }
+
+    body {
+        background-color: rgb(222, 231, 236);
+    }
+
+    .card {
+        background-color: rgb(222, 231, 236);
+    }
+
+ }
